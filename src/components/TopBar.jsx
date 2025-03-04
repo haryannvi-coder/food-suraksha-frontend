@@ -1,8 +1,8 @@
 export function TopBar() {
-    return (
-      <div className="bg-blue-500 text-white p-1 text-center">
-        Topbar
-      </div>
-    );
-  }
+  return (
+    <header className="bg-blue-500 text-white p-1 text-center shadow-md">
+      Food Suraksha 24X7
+    </header>
+  );
+}
   
