@@ -39,7 +39,18 @@ export function Hotels() {
       {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/commercial-kitchen-pests.jpg`, type : 'image'},
       {url: `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/dirty-fly-on-food-carrier-insect-RJCRDY.jpg`, type : 'image'},
       {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/Pest-control-3.jpg`, type : 'image'}
-    ]
+    ],
+    5: [
+      {url  : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/Utensil_clean/utensil_c2+1.webm`, type : 'video'},
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/Utensil_clean/utensil_c2.webm`, type : 'video'},
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/Utensil_clean/utensil_c3.webm`, type : 'video'},
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/Utensil_clean/utensils2.jpg`, type : 'image'}
+    ],
+    6 : [
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/oil_unclean/oil3.jpg`, type : 'image'},
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/oil_unclean/oil2.webp`, type : 'video'},
+      {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/oil_unclean/oil1.jpeg`, type : 'image'}
+    ],
   };
 
   // Get the media for the current hotel, or use an empty array if not found
