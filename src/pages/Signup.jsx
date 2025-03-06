@@ -1,5 +1,5 @@
 import { Heading } from "../components/Heading"
-import { SubHeading } from "../components/Subheading"
+import { SubHeading } from "../components/SubHeading"
 import { InputBox } from "../components/InputBox"
 import { Button } from "../components/Button"
 import { useEffect, useState } from "react"
