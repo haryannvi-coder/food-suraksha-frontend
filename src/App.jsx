@@ -1,10 +1,10 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Dashboard } from './pages/Dashboard'
-import { Hotel1 } from './pages/Hotel1'
-import { Hotel2 } from './pages/Hotel2'
-import { Hotel3 } from './pages/Hotel3'
+import {Hotels} from './pages/Hotels'
 import { Home } from './pages/Home'
 import { Layout } from './Layout'
+import { Signin } from './pages/Signin'
+import { Signup } from './pages/Signup'
 
 
 function App() {
@@ -15,7 +15,9 @@ function App() {
         <Route path="/" element={<Layout />} >
           <Route path="" element={<Home />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="/hotel/:id" element={<Hotel1 />} />
+          <Route path="/hotel/:id" element={<Hotels />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Route>
       </Routes>
     </BrowserRouter>
