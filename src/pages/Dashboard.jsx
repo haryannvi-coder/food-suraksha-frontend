@@ -7,9 +7,17 @@ export function Dashboard () {
   
 
   const hotels = [
-    { name: 'Grand Palace Hotel', location: 'New York, USA' },
-    { name: 'Ocean View Resort', location: 'Goa, India' },
-    { name: 'Mountain Escape', location: 'Manali, India' },
+    { name: 'Serene Bay Hotel', location: 'Trivandrum, India' },
+    { name: 'Crystal Lake Resort', location: 'Trivandrum, India' },
+    { name: 'Sunset View Inn', location: 'Trivandrum, India' },
+    { name: 'Royal Palm Suites', location: 'Trivandrum, India' },
+    { name: 'Sea Breeze Hotel', location: 'Trivandrum, India' },
+    { name: 'Golden Orchid Inn', location: 'Trivandrum, India' },
+    { name: 'Trivandrum Grand Residency', location: 'Trivandrum, India' },
+    { name: 'Green Valley Retreat', location: 'Trivandrum, India' },
+    { name: 'Blue Horizon Resort', location: 'Trivandrum, India' },
+    { name: 'Palm Grove Stay', location: 'Trivandrum, India' },
+
   ];
 
   const handleNavigation = (index) => {
@@ -18,8 +26,8 @@ export function Dashboard () {
 
 
   return <>
-    <div>
-      <h1>Hotels</h1>
+    <h1>Hotels</h1>
+    <div className='flex flex-wrap gap-20' >
       {hotels.map((hotel, index) => (
         <HotelCard
           key={index}
