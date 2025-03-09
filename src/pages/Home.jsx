@@ -6,16 +6,15 @@ import { useNavigate } from 'react-router-dom';
 export function Home() {
   const navigate = useNavigate();
 
-  
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50  text-gray-900 dark:text-white">
       <img
         src={companyLogo}
         alt="Logo"
         className="w-40 md:w-52 mb-8 drop-shadow-lg"
       />
-      <h1 className="text-4xl font-bold mb-4">Welcome to Food Suraksha 24X7</h1>
-      <p className="text-lg mb-8">Empowering FSSAI Compliance & Kitchen Safety</p>
+      <h1 className="text-4xl font-bold mb-4 text-black">Welcome to Food Suraksha 24X7</h1>
+      <p className="text-lg mb-8 text-black ">Empowering FSSAI Compliance & Kitchen Safety</p>
 
       <button
       onClick={() => navigate("/signin")}
@@ -30,7 +29,11 @@ export function Home() {
     >
       Sign Up
     </button>
+    <br/>
 
+    <button onClick={() => navigate("/ministerdashboard")} className="text-black" >  Minister </button>
+    <br/>
+    <button onClick={() => navigate("/newdashboard")} className="text-black" >  Fssai </button>
     </div>
   );
 }

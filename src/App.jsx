@@ -5,7 +5,9 @@ import { Home } from './pages/Home'
 import { Layout } from './Layout'
 import { Signin } from './pages/Signin'
 import { Signup } from './pages/Signup'
-
+import { MinisterDashboard } from './pages/MinisterDashboard'
+import { FsoDashboard } from './pages/FsoDashboard'
+import { NewDash } from './pages/NewDash'
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           <Route path="/hotel/:id" element={<Hotels />} />
           <Route path="signup" element={<Signup />} />
           <Route path="signin" element={<Signin />} />
+          <Route path="ministerdashboard" element = {<MinisterDashboard />} />
+          <Route path="fsodashboard" element = {<FsoDashboard />} />
+          <Route path="newdashboard" element = {<NewDash />} />
         </Route>
       </Routes>
     </BrowserRouter>

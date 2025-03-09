@@ -43,123 +43,104 @@ export function Dashboard () {
 }
 
 
-// import { Link } from "react-router-dom";
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+
+// const areas = ['Trivandrum', 'Kochi', 'Chennai'];
+
+// const hotelData = {
+//   Trivandrum: [
+//     { name: 'Serene Bay Hotel', location: 'Trivandrum, India' },
+//     { name: 'Crystal Lake Resort', location: 'Trivandrum, India' },
+//   ],
+//   Kochi: [
+//     { name: 'Ocean Pearl Inn', location: 'Kochi, India' },
+//     { name: 'Sunset Shores', location: 'Kochi, India' },
+//   ],
+//   Chennai: [
+//     { name: 'Marina View Suites', location: 'Chennai, India' },
+//     { name: 'Golden Sand Hotel', location: 'Chennai, India' },
+//   ],
+// };
+
+// const alertData = {
+//   Trivandrum: [
+//     { hotel: 'Serene Bay Hotel', alert: 'Water Quality Alert', date: '2025-03-10', time: '10:00 AM' },
+//     { hotel: 'Crystal Lake Resort', alert: 'Oil Adulteration Detected', date: '2025-03-11', time: '02:00 PM' },
+//   ],
+//   Kochi: [
+//     { hotel: 'Ocean Pearl Inn', alert: 'Gas Leakage Detected', date: '2025-03-12', time: '03:30 PM' },
+//   ],
+//   Chennai: [
+//     { hotel: 'Golden Sand Hotel', alert: 'Pest Detection Alert', date: '2025-03-13', time: '09:15 AM' },
+//   ],
+// };
 
 // export function Dashboard() {
+//   const navigate = useNavigate();
+//   const [selectedArea, setSelectedArea] = useState('Trivandrum');
+
+//   const handleNavigation = (index) => {
+//     navigate(`/hotel/${index}`);
+//   };
+
 //   return (
-//     <div className="flex min-h-screen bg-black text-white">
-//       {/* Sidebar */}
-//       <aside className="w-64 bg-[#181818] p-6 space-y-8">
-//         <h1 className="text-2xl font-bold">Food Suraksha 24-7</h1>
+//     <div className="p-8 min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-900 dark:to-gray-800">
+//       <h1 className="text-4xl font-bold mb-8">Dashboard</h1>
 
-//         <nav className="space-y-4">
-//           <Link to="/" className="flex items-center space-x-3 p-3 rounded-lg bg-purple-600">
-//             <span>🏠</span>
-//             <span>Dashboard</span>
-//           </Link>
-//           {[
-//             "My Alerts",
-//             "Oil Quality",
-//             "Water Quality",
-//             "Gas Concentration",
-//             "Hygiene Monitoring",
-//             "Pest Monitoring",
-//           ].map((item) => (
-//             <Link
-//               key={item}
-//               to={`/${item.toLowerCase().replaceAll(" ", "-")}`}
-//               className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-lg"
-//             >
-//               <span>📊</span>
-//               <span>{item}</span>
-//             </Link>
-//           ))}
+//       {/* Area Selector */}
+//       <div className="flex gap-4 mb-8">
+//         {areas.map((area) => (
+//           <button
+//             key={area}
+//             className={`px-4 py-2 rounded-lg transition ${
+//               selectedArea === area ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
+//             }`}
+//             onClick={() => setSelectedArea(area)}
+//           >
+//             {area}
+//           </button>
+//         ))}
+//       </div>
 
-//           <Link to="/logout" className="flex items-center space-x-3 p-3 hover:bg-gray-700 rounded-lg">
-//             <span>🚪</span>
-//             <span>Logout</span>
-//           </Link>
-//         </nav>
-
-//         <button className="mt-8 p-4 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 text-white font-semibold">
-//           Health is <span className="font-bold">WEALTH</span> 
-//         </button>
-//       </aside>
-
-//       {/* Main Content */}
-//       <main className="flex-1 p-8">
-//         {/* Header */}
-//         <header className="flex justify-between items-center mb-8">
-//           <h2 className="text-3xl font-bold">Dashboard</h2>
-
-//           <div className="flex items-center space-x-4">
-//             <input
-//               type="text"
-//               placeholder="Search Here"
-//               className="p-2 rounded-lg bg-gray-800 placeholder-gray-400"
-//             />
-//             <span>🔔</span>
-//             <span>💬</span>
-//             <img src="/avatar.jpg" alt="User Avatar" className="w-8 h-8 rounded-full" />
-//           </div>
-//         </header>
-
-//         {/* Alert Section */}
-//         <section className="mb-8">
-//           <div className="bg-[#4d2222] p-4 rounded-xl flex justify-between items-center">
-//             <h3 className="text-xl font-semibold">My Alerts</h3>
-//             <span>10 Alerts</span>
-//           </div>
-//         </section>
-
-//         {/* Cards Section */}
-//         <div className="grid grid-cols-2 gap-8">
-//           {/* Hotel 1 */}
-//           <div className="bg-[#181818] p-6 rounded-xl">
-//             <h4 className="text-xl mb-2">HOTEL - 1</h4>
-//             <span className="text-green-400">Checked</span>
-//           </div>
-
-//           {/* Hotel 4 */}
-//           <div className="bg-[#181818] p-6 rounded-xl">
-//             <h4 className="text-xl mb-2">HOTEL - 4</h4>
-//             <p className="text-red-400">Adulteration Detected</p>
-//             <button className="text-yellow-400 mt-4">Take Action</button>
-//           </div>
-
-//           {/* Issues Card */}
-//           <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-6 rounded-xl">
-//             <p className="text-sm mb-2">28/02/25</p>
-//             <h2 className="text-4xl font-bold">120</h2>
-//             <p>Issues detected</p>
-//           </div>
-
-//           {/* Result Card */}
-//           <div className="bg-[#6a38b2] p-6 rounded-xl">
-//             <h4 className="text-xl mb-4">RESULT</h4>
-//             {[
-//               ["Hotel 1", "Checked"],
-//               ["Hotel 2", "Pending"],
-//               ["Hotel 3", "Checked"],
-//               ["Hotel 4", "On Adulteration Detected"],
-//               ["Hotel 5", "Checked"],
-//               ["Hotel 6", "Pending"],
-//               ["Hotel 7", "Severe Adulteration Detected"],
-//             ].map(([hotel, status], index) => (
-//               <p key={index} className={status.includes("Adulteration") ? "text-red-400" : "text-white"}>
-//                 {hotel} - {status}
-//               </p>
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//         {/* Hotel List Card */}
+//         <div className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-2xl">
+//           <h2 className="text-2xl font-semibold mb-6">Hotels in {selectedArea}</h2>
+//           <div className="space-y-4">
+//             {hotelData[selectedArea].map((hotel, index) => (
+//               <div
+//                 key={index}
+//                 className="p-4 bg-blue-50 dark:bg-gray-700 rounded-lg cursor-pointer hover:shadow-md"
+//                 onClick={() => handleNavigation(index)}
+//               >
+//                 <p className="text-lg font-medium">{hotel.name}</p>
+//                 <p className="text-sm text-gray-600 dark:text-gray-400">{hotel.location}</p>
+//               </div>
 //             ))}
 //           </div>
 //         </div>
 
-//         {/* Check for New Hotel */}
-//         <div className="mt-8">
-//           <button className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white py-3 px-8 rounded-xl hover:scale-105 transition">
-//             Check for new HOTEL
-//           </button>
+//         {/* Alerts Card */}
+//         <div className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-2xl">
+//           <h2 className="text-2xl font-semibold mb-6">Alerts in {selectedArea}</h2>
+//           <div className="space-y-4">
+//             {alertData[selectedArea].map((alert, index) => (
+//               <div key={index} className="p-4 bg-red-50 dark:bg-gray-700 rounded-lg">
+//                 <p className="text-lg font-medium">{alert.alert}</p>
+//                 <p className="text-sm">Hotel: {alert.hotel}</p>
+//                 <p className="text-sm">Date: {alert.date}</p>
+//                 <p className="text-sm">Time: {alert.time}</p>
+//               </div>
+//             ))}
+//           </div>
 //         </div>
-//       </main>
+//       </div>
 //     </div>
 //   );
 // }
+
+
+
+
+
