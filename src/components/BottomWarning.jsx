@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
 export function BottomWarning({label, buttonText, to}){
-    return <div className="p-2 text-lg" >
+    return <div className="p-2 text-lg text-gray-400" >
         {label}
         <Link className="px-2 underline text-green-500" to={to}>
             {buttonText}
-      </Link>
+        </Link>
     </div>
 }

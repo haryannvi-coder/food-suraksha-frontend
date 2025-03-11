@@ -1,9 +1,6 @@
 import { useParams } from 'react-router-dom';
 
 export function Hotels() {
-  
-
-
   const { id } = useParams();
 
   // Dynamic media for different hotels
@@ -39,6 +36,10 @@ export function Hotels() {
 
     ],
     2: [
+      {url: `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/cockroach-eating-1024x683.jpg`, type: 'image' },
+        {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/commercial-kitchen-pests.jpg`, type : 'image'},
+        {url: `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/dirty-fly-on-food-carrier-insect-RJCRDY.jpg`, type : 'image'},
+        {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/PEST/Pest-control-3.jpg`, type : 'image'},
       {url: `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/pics+%26+videos/kitchen+1+water.jpg`, type: 'image' },
       {url: `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/pics+%26+videos/kitchen1+video.mp4`, type: 'video' },
       {url : `https://foodsuraksha247.s3.eu-north-1.amazonaws.com/pics+%26+videos/kitchen1dining.jpeg`, type : 'image'},

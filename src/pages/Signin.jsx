@@ -14,7 +14,7 @@ export function Signin(){
 
     const navigate = useNavigate();
 
-    return <div className="flex justify-center min-h-screen dark:bg-slate-900" >
+    return <div className="flex justify-center min-h-screen " >
         <div className="text-center m-20 text-gray-200 space-y-4" >
             <Heading label="Signin" />
 
