@@ -9,6 +9,9 @@ import { MinisterDashboard } from './pages/MinisterDashboard'
 import { FsoDashboard } from './pages/FsoDashboard'
 import { NewDash } from './pages/NewDash'
 import { HotelStatusDashboard } from './pages/HotelStatusDashboard'
+import { Hotels1 } from './pages/Hotels1'
+import { HotelDetail } from './pages/HotelDetail'
+import { KeralaMap } from './pages/KeralaMap'
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="fsodashboard" element = {<FsoDashboard />} />
           <Route path="newdashboard" element = {<NewDash />} />
           <Route path="hotelstatusdashboard" element = {<HotelStatusDashboard />} />
+          <Route path="/hotels" element={<Hotels1 />} />
+          <Route path="/hotel/:id" element={<HotelDetail />} />
+          <Route path="/keralamap" element={<KeralaMap />} />
         </Route>
       </Routes>
     </BrowserRouter>
