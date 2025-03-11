@@ -8,6 +8,7 @@ import { Signup } from './pages/Signup'
 import { MinisterDashboard } from './pages/MinisterDashboard'
 import { FsoDashboard } from './pages/FsoDashboard'
 import { NewDash } from './pages/NewDash'
+import { HotelStatusDashboard } from './pages/HotelStatusDashboard'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="ministerdashboard" element = {<MinisterDashboard />} />
           <Route path="fsodashboard" element = {<FsoDashboard />} />
           <Route path="newdashboard" element = {<NewDash />} />
+          <Route path="hotelstatusdashboard" element = {<HotelStatusDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

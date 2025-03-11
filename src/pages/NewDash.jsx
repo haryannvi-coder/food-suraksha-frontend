@@ -116,6 +116,9 @@ export function NewDash() {
     <div className="min-h-screen p-8 bg-white text-gray-900">
       <header className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold">Local Food Safety Dashboard</h1>
+        <br />
+        <button onClick={() => navigate("/hotelstatusdashboard")} className="text-black" >  Status </button>
+        <br />
         <div className="space-x-4">
           <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Settings</button>
           <button className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Logout</button>
