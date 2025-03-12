@@ -45,12 +45,12 @@ export function KeralaMap() {
   const navigate = useNavigate();
 
   const handleMarkerClick = (id) => {
-    navigate(`/hotel/${id}`);
+    navigate(`/hoteldetails/${id}`);
   };
 
   return (
     <div className="min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8">Kerala Hotel Map</h1>
+      <h1 className="text-3xl font-bold text-center mb-8"> Hotels in Trivendrum, Kerala</h1>
       <MapContainer center={[8.5241, 76.9366]} zoom={13} className="h-[600px] w-full rounded-lg shadow-lg">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

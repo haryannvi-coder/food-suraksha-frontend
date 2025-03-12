@@ -8,5 +8,5 @@ export function HotelDetail() {
 
   if (!hotel) return <p>Hotel not found.</p>;
 
-  return <HotelInfo hotel={hotel} />;
+  return <HotelInfo hotel={hotel} id={id} />;
 }

@@ -1,15 +1,13 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { Dashboard } from './pages/Dashboard'
-import {Hotels} from './pages/Hotels'
+import { AllHotelsGalleryDashboard } from './pages/AllHotelsGalleryDashboard'
+import { HotelGallery } from './pages/HotelGallery'
 import { Home } from './pages/Home'
 import { Layout } from './Layout'
 import { Signin } from './pages/Signin'
 import { Signup } from './pages/Signup'
 import { MinisterDashboard } from './pages/MinisterDashboard'
 import { FsoDashboard } from './pages/FsoDashboard'
-import { NewDash } from './pages/NewDash'
-import { HotelStatusDashboard } from './pages/HotelStatusDashboard'
-import { Hotels1 } from './pages/Hotels1'
+import { Alerts } from './pages/Alerts'
 import { HotelDetail } from './pages/HotelDetail'
 import { KeralaMap } from './pages/KeralaMap'
 
@@ -20,17 +18,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route path="" element={<Home />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="/hotel/:id" element={<Hotels />} />
           <Route path="signup" element={<Signup />} />
           <Route path="signin" element={<Signin />} />
           <Route path="ministerdashboard" element = {<MinisterDashboard />} />
           <Route path="fsodashboard" element = {<FsoDashboard />} />
-          <Route path="newdashboard" element = {<NewDash />} />
-          <Route path="hotelstatusdashboard" element = {<HotelStatusDashboard />} />
-          <Route path="/hotels" element={<Hotels1 />} />
-          <Route path="/hotel/:id" element={<HotelDetail />} />
-          <Route path="/keralamap" element={<KeralaMap />} />
+          <Route path="alerts" element = {<Alerts />} />
+          <Route path="hoteldetails/:id" element={<HotelDetail />} />
+          <Route path="keralamap" element={<KeralaMap />} />
+          <Route path="hotelgallery/:id" element={<HotelGallery />} />
+          <Route path="allhotelsgallerydashboard" element={<AllHotelsGalleryDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function HotelStatusDashboard() {
+export function Alerts() {
   const [hotels, setHotels] = useState([]);
 
   const fetchHotelData = async () => {

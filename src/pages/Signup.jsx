@@ -2,12 +2,10 @@ import { Heading } from "../components/Heading"
 import { SubHeading } from "../components/SubHeading"
 import { InputBox } from "../components/InputBox"
 import { Button } from "../components/Button"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { BottomWarning } from "../components/BottomWarning"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
-
-
 
 
 export function Signup(){
@@ -43,7 +41,7 @@ export function Signup(){
                         password
                     })
 
-                    navigate('/dashboard')
+                    navigate('/fsodashboard')
 
                 } catch (error) {
                     console.log("errror in signup")

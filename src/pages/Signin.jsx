@@ -36,7 +36,7 @@ export function Signin(){
                     })
 
                     setTimeout(() => {
-                        navigate('/dashboard')
+                        navigate('/fsodashboard')
                     }, 1000);  // Redirect to dashboard page
 
                 } catch (error) {

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-export function Hotels() {
+export function HotelGallery() {
   const { id } = useParams();
 
   // Dynamic media for different hotels
