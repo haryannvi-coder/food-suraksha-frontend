@@ -5,7 +5,7 @@ export function HotelStatusDashboard() {
 
   const fetchHotelData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/v1/fso/hotelData");
+      const response = await fetch("https://food-suraksha-backend.onrender.com/api/v1/fso/hotelData");
       const data = await response.json();
 
       // Merge records by hotel name and determine status
