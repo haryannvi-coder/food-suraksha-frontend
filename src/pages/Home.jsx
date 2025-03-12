@@ -34,6 +34,10 @@ export function Home() {
     <button onClick={() => navigate("/ministerdashboard")} className="text-black" >  Minister </button>
     <br/>
     <button onClick={() => navigate("/newdashboard")} className="text-black" >  Fssai </button>
+    <br/>
+    <button onClick={() => navigate("/keralamap")} className="text-black" >  Map </button>
+    <br/>
+    <button onClick={() => navigate("/hotelstatusdashboard")} className="text-black" >  Status </button>
     </div>
   );
 }
