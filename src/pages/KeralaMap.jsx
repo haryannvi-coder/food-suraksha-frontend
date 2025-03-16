@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useNavigate } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
+import { Sidebar } from '../components/Sidebar';
 
 export const hotels = [
   {
@@ -49,8 +50,9 @@ export function KeralaMap() {
   };
 
   return (
+    <>
     <div className="min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8"> Hotels in Trivendrum, Kerala</h1>
+      <h2 className=" font-bold text-center mb-8"> Hotels in Trivendrum, Kerala</h2>
       <MapContainer center={[8.5241, 76.9366]} zoom={13} className="h-[600px] w-full rounded-lg shadow-lg">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -67,5 +69,6 @@ export function KeralaMap() {
         ))}
       </MapContainer>
     </div>
+    </>
   );
 }

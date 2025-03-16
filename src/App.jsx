@@ -10,6 +10,7 @@ import { FsoDashboard } from './pages/FsoDashboard'
 import { Alerts } from './pages/Alerts'
 import { HotelDetail } from './pages/HotelDetail'
 import { KeralaMap } from './pages/KeralaMap'
+import { Dummy } from './pages/Dummy'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="keralamap" element={<KeralaMap />} />
           <Route path="hotelgallery/:id" element={<HotelGallery />} />
           <Route path="allhotelsgallerydashboard" element={<AllHotelsGalleryDashboard />} />
+          <Route path="dummy" element={<Dummy />} />
         </Route>
       </Routes>
     </BrowserRouter>

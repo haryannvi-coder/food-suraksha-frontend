@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {KeralaMap} from './KeralaMap'
-import { Sidebar } from '../components/Sidebar'
 
-export function FsoDashboard() {
+export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const navigate = useNavigate()
@@ -50,12 +48,6 @@ export function FsoDashboard() {
         <div className="w-6 h-[2px] bg-gray-800 mb-1" />
         <div className="w-6 h-[2px] bg-gray-800" />
       </button>
-
-      {/* Main Content */}
-      <div className={`flex-1 p-8 transition-all duration-300 ${isOpen ? 'ml-64' : 'ml-16'}`}>
-
-        <KeralaMap />
       </div>
-    </div>
   )
 }

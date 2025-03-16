@@ -1,4 +1,4 @@
-import companyLogo from "../assets/brandLogo.jpg";
+import companyLogo from "../assets/brandLogo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
@@ -11,8 +11,9 @@ export function Home() {
       <img
         src={companyLogo}
         alt="Logo"
-        className="w-40 md:w-52 mb-8 drop-shadow-lg"
+        className="w-40 md:w-52 mt-4 mb-6 mx-auto bg-transparent"
       />
+      
       <h1 className="text-4xl font-bold mb-4 text-black">Welcome to Food Suraksha 24X7</h1>
       <p className="text-lg mb-8 text-black ">Empowering FSSAI Compliance & Kitchen Safety</p>
 
