@@ -35,7 +35,7 @@ export function AddHotel(){
 
             <Button onClick={async () => {
                 try {
-                    const res = await axios.post(`http://localhost:3005/api/v1/hotel/add`, {
+                    const res = await axios.post(`https://food-suraksha-backend.onrender.com/api/v1/hotel/add`, {
                         name,
                         district,
                         managerEmail
