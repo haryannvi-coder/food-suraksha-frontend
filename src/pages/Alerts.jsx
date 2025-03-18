@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sidebar } from "../components/Sidebar";
+
 
 export function Alerts() {
   const [hotels, setHotels] = useState([]);
