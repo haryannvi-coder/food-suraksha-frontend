@@ -11,7 +11,7 @@ export function FsoDashboard() {
   const menuItems = [
     { label: 'Jurisdiction Map', path: '/keralamap' },
     { label: 'Alerts', path: '/alerts' },
-    { label: 'Track License Applications', path: '/licenses' },
+    { label: 'Add new hotel', path: '/addHotel' },
     { label: 'Track Claims', path: '/claims' },
     { label: 'Logout', path: '/logout' }
   ]

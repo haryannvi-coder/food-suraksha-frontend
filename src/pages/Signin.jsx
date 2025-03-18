@@ -30,10 +30,10 @@ export function Signin(){
 
             <Button onClick={async () => {
                 try {
-                    const res = await axios.post(`https://food-suraksha-backend.onrender.com/api/v1/fso/signin`, {
-                        email,
-                        password
-                    })
+                    // const res = await axios.post(`https://food-suraksha-backend.onrender.com/api/v1/fso/signin`, {
+                    //     email,
+                    //     password
+                    // })
 
                     setTimeout(() => {
                         navigate('/fsodashboard')

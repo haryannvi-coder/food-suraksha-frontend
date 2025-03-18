@@ -12,6 +12,7 @@ import { HotelDetail } from './pages/HotelDetail'
 import { KeralaMap } from './pages/KeralaMap'
 import { Dummy } from './pages/Dummy'
 import { Logout } from './pages/Logout'
+import {AddHotel} from './pages/AddHotel'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="allhotelsgallerydashboard" element={<AllHotelsGalleryDashboard />} />
           <Route path="dummy" element={<Dummy />} /> 
           <Route path="logout" element={<Logout />} />
+          <Route path="addHotel" element={<AddHotel />} />
         </Route>
       </Routes>
     </BrowserRouter>
