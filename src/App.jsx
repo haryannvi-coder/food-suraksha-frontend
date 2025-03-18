@@ -11,6 +11,7 @@ import { Alerts } from './pages/Alerts'
 import { HotelDetail } from './pages/HotelDetail'
 import { KeralaMap } from './pages/KeralaMap'
 import { Dummy } from './pages/Dummy'
+import { Logout } from './pages/Logout'
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
           <Route path="keralamap" element={<KeralaMap />} />
           <Route path="hotelgallery/:id" element={<HotelGallery />} />
           <Route path="allhotelsgallerydashboard" element={<AllHotelsGalleryDashboard />} />
-          <Route path="dummy" element={<Dummy />} />
+          <Route path="dummy" element={<Dummy />} /> 
+          <Route path="logout" element={<Logout />} />
         </Route>
       </Routes>
     </BrowserRouter>

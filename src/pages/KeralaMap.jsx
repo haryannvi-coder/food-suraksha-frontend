@@ -50,7 +50,26 @@ export const hotels = [
     license: 'KRL44556',
     penalties: 'None',
   },
+  {
+    id: 5,
+    name: 'Tranquil Bay Hotel',
+    lat: 8.5267,
+    lng: 76.9334,
+    owner: 'Suresh Reddy',
+    license: 'KRL77889',
+    penalties: '3 safety violations',
+  },
+  {
+    id: 6,
+    name: 'Emerald Residency',
+    lat: 8.5239,
+    lng: 76.9421,
+    owner: 'Lakshmi Varma',
+    license: 'KRL99221',
+    penalties: 'None',
+  },
 ];
+
 
 export function KeralaMap() {
   const navigate = useNavigate();

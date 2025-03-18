@@ -45,7 +45,7 @@ export function Alerts() {
 
   useEffect(() => {
     fetchHotelData();
-    const interval = setInterval(fetchHotelData, 100000);
+    const interval = setInterval(fetchHotelData, 10000);
 
     return () => clearInterval(interval);
   }, []);
