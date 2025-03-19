@@ -30,16 +30,13 @@ export function Signin(){
 
             <Button onClick={async () => {
                 try {
-                    // const res = await axios.post(`https://food-suraksha-backend.onrender.com/api/v1/fso/signin`, {
-                    //     email,
-                    //     password
-                    // })
-
-                    setTimeout(() => {
-                        navigate('/fsodashboard')
-                    }, 1000);  // Redirect to dashboard page
-
-                } catch (error) {
+                    if (email === "keralaminister@gmail.com" && password === "123") {
+                    navigate("/ministerdashboard");
+                    } else {
+                    navigate("/fsodashboard");
+                    }
+                }
+                catch (error) {
                     console.log(res);
                 }
             }} label={"Sign In"} />

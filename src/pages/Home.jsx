@@ -31,9 +31,6 @@ export function Home() {
       Sign Up
     </button>
     <br/>
-
-    <button onClick={() => navigate("/ministerdashboard")} className="text-black" >  Minister </button>
-    <br/>
     </div>
   );
 }
