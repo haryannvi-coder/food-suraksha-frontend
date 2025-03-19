@@ -1,0 +1,94 @@
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useNavigate } from 'react-router-dom';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for missing marker icons
+const customIcon = new L.Icon({
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  iconSize: [25, 41], // Default size
+  iconAnchor: [12, 41], // Default anchor
+  popupAnchor: [1, -34],
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  shadowSize: [41, 41],
+});
+
+export const locations = [
+  {
+    name: "Alappuzha",
+    coordinates: [9.4981, 76.3388],
+    hotels: [
+      { id: 7, name: "Lake Palace Resort", lat: 9.5, lon: 76.4001 },
+      { id: 8, name: "Citrus Retreats Alleppey", lat: 9.51, lon: 76.32 },
+      { id: 9, name: "Marari Beach Resort", lat: 9.49, lon: 76.34 },
+    ],
+  },
+  {
+    name: "Idukki",
+    coordinates: [9.85, 76.97],
+    hotels: [
+      { id: 13, name: "Spicy Tree Munnar", lat: 9.83, lon: 76.95 },
+      { id: 14, name: "Silver Tips", lat: 9.87, lon: 76.99 },
+      { id: 15, name: "Chandy's Windy Woods", lat: 9.85, lon: 76.97 },
+    ],
+  },
+  {
+    name: "Kollam",
+    coordinates: [8.8932, 76.6141],
+    hotels: [
+      { id: 4, name: "Hotel Sea Palace", lat: 8.89, lon: 76.61 },
+      { id: 5, name: "Raviz Ashtamudi", lat: 8.90, lon: 76.62 },
+      { id: 6, name: "Quilon Beach Hotel", lat: 8.91, lon: 76.63 },
+    ],
+  },
+  {
+    name: "Kottayam",
+    coordinates: [9.5916, 76.5222],
+    hotels: [
+      { id: 10, name: "Aveda Kumarakom", lat: 9.58, lon: 76.52 },
+      { id: 11, name: "Coconut Lagoon", lat: 9.59, lon: 76.53 },
+      { id: 12, name: "Abad Whispering Palms", lat: 9.60, lon: 76.54 },
+    ],
+  },
+  {
+    name: "Thiruvananthapuram",
+    coordinates: [8.5241, 76.9366],
+    hotels: [
+      { id: 1, name: "Hycinth Hotels", lat: 8.52, lon: 76.93 },
+      { id: 2, name: "The Leela Kovalam", lat: 8.53, lon: 76.94 },
+      { id: 3, name: "Apollo Dimora", lat: 8.51, lon: 76.92 },
+    ],
+  },
+];
+
+export function KeralaMap1() {
+  const navigate = useNavigate();
+
+  const handleMarkerClick = (id) => {
+    navigate(`/hoteldetails/${id}`);
+  };
+
+  return (
+    <div className="min-h-screen">
+      <h2 className="font-bold text-center mb-8">Hotels in Kerala</h2>
+      <MapContainer center={[8.5241, 76.9366]} zoom={8} className="h-screen w-full rounded-lg shadow-lg">
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&copy; OpenStreetMap contributors"
+        />
+        {locations.map((location) =>
+          location.hotels.map((hotel) => (
+            <Marker
+              key={hotel.id}
+              position={[hotel.lat, hotel.lon]}
+              icon={customIcon} // Apply the custom marker icon
+              eventHandlers={{ click: () => handleMarkerClick(hotel.id) }}
+            >
+              <Popup>{hotel.name}</Popup>
+            </Marker>
+          ))
+        )}
+      </MapContainer>
+    </div>
+  );
+}

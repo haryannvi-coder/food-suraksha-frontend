@@ -10,9 +10,11 @@ import { FsoDashboard } from './pages/FsoDashboard'
 import { Alerts } from './pages/Alerts'
 import { HotelDetail } from './pages/HotelDetail'
 import { KeralaMap } from './pages/KeralaMap'
+import { KeralaMap1 } from './pages/KeralaMap1'
 import { Dummy } from './pages/Dummy'
 import { Logout } from './pages/Logout'
 import {AddHotel} from './pages/AddHotel'
+import { Cmdashboard } from './pages/Cmdashboard'
 
 function App() {
   return (
@@ -28,11 +30,13 @@ function App() {
           <Route path="alerts" element = {<Alerts />} />
           <Route path="hoteldetails/:id" element={<HotelDetail />} />
           <Route path="keralamap" element={<KeralaMap />} />
+          <Route path="keralamap1" element={<KeralaMap1 />} />
           <Route path="hotelgallery/:id" element={<HotelGallery />} />
           <Route path="allhotelsgallerydashboard" element={<AllHotelsGalleryDashboard />} />
           <Route path="dummy" element={<Dummy />} /> 
           <Route path="logout" element={<Logout />} />
           <Route path="addHotel" element={<AddHotel />} />
+          <Route path="cmdashboard" element={<Cmdashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

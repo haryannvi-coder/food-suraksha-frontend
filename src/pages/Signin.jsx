@@ -4,7 +4,6 @@ import { InputBox } from "../components/InputBox"
 import { Button } from "../components/Button"
 import { useState } from "react"
 import { BottomWarning } from "../components/BottomWarning"
-import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 
@@ -31,7 +30,7 @@ export function Signin(){
             <Button onClick={async () => {
                 try {
                     if (email === "keralaminister@gmail.com" && password === "123") {
-                    navigate("/ministerdashboard");
+                    navigate("/cmdashboard");
                     } else {
                     navigate("/fsodashboard");
                     }
