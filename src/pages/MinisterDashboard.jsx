@@ -7,7 +7,7 @@ export function MinisterDashboard() {
 
   async function fetchHotelData() {
     try {
-      const response = await axios.get("https://food-suraksha-backend.onrender.com/api/v1/fso/hotelData");
+      const response = await axios.get("https://food-suraksha-backend-1.onrender.com/api/v1/fso/hotelData");
       const data = response.data;
 
       // Group by district and store unique hotel names
