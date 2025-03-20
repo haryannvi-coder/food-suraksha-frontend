@@ -118,7 +118,7 @@ export function Alerts() {
 
   const fetchHotelData = async () => {
     try {
-      const response = await fetch("https://food-suraksha-backend.onrender.com/api/v1/fso/hotelData");
+      const response = await fetch("https://food-suraksha-backend-1.onrender.com/api/v1/fso/hotelData");
       const data = await response.json();
 
       const mergedHotels = Object.values(
