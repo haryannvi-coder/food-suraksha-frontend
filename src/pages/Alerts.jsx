@@ -117,7 +117,7 @@ export function Alerts() {
   const districts = ["Alappuzha", "Idukki", "Kollam", "Kottayam", "Thiruvananthapuram"];
 
   const fetchHotelData = async () => {
-    try 
+    try {
       const response = await fetch("https://food-suraksha-backend-2.onrender.com/api/v1/fso/hotelData");
       const data = await response.json();
 
