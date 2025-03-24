@@ -35,7 +35,7 @@ export function Signup(){
 
             <Button onClick={async () => {
                 try {
-                    const res = await axios.post(`https://food-suraksha-backend.onrender.com/api/v1/fso/signup`, {
+                    const res = await axios.post(`https://food-suraksha-backend-2.onrender.com/api/v1/fso/signup`, {
                         name,
                         email,
                         password

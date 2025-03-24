@@ -118,7 +118,7 @@ export function Alerts() {
 
   const fetchHotelData = async () => {
     try {
-      const response = await fetch("https://food-suraksha-backend.onrender.com/api/v1/fso/hotelData");
+      const response = await fetch("https://food-suraksha-backend-2.onrender.com/api/v1/fso/hotelData");
       const data = await response.json();
 
       const mergedHotels = Object.values(
@@ -156,7 +156,7 @@ export function Alerts() {
 
   useEffect(() => {
     fetchHotelData();
-    const interval = setInterval(fetchHotelData, 10000);
+    const interval = setInterval(fetchHotelData, 20000);
     return () => clearInterval(interval);
   }, []);
 
@@ -212,6 +212,12 @@ export function Alerts() {
                   alt="Sanitation Issue"
                   className="rounded-lg w-full h-32 object-cover"
                 />
+              //   <img
+              //   key={index}
+              //   src={`data:image/jpeg;base64,${frame.S}`} // Extract base64 frame
+              //   alt={`Frame ${index + 1}`}
+              //   className="rounded-lg w-full h-32 object-cover"
+              // />
               ))}
             </div>
             <button
