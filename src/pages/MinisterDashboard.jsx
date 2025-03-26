@@ -40,7 +40,7 @@ export function MinisterDashboard() {
 
   useEffect(() => {
     fetchHotelData();
-    const interval = setInterval(fetchHotelData, 20000);
+    const interval = setInterval(fetchHotelData, 10000);
     return () => clearInterval(interval);
   }, []);
 
